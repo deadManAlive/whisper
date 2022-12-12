@@ -1,0 +1,10 @@
+# folders
+/node_modules/
+/.venv/
+/.vscode/
+/build/
+/__pycache__/
+
+.DS_Store
+# files
+/public/bundle.*
