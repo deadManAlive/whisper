@@ -8,3 +8,4 @@
 .DS_Store
 # files
 /public/bundle.*
+*.spiffs.bin

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
+    "mkfs": "npm run build && python mkputfs.py --no-upload",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear"
   },
