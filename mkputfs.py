@@ -41,7 +41,8 @@ if __name__ == "__main__":
             raise Exception("Port undefined for uploading!")
         port = p.split("=")[1]
 
-        spiffsgen.main(spiffsgen_args)
+        if "--just-upload" not in sys.argv:
+            spiffsgen.main(spiffsgen_args)
 
         
     # upload
