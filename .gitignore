@@ -4,8 +4,9 @@
 /.vscode/
 /build/
 /__pycache__/
-
 .DS_Store
+
 # files
 /public/bundle.*
 *.spiffs.bin
+arduino-cli.yaml

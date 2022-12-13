@@ -24,5 +24,3 @@ def get_spiffs_parameter(partition_table: str ="default.csv") -> Tuple[str | Non
                 spiffs_size = row['size'].strip()
                 
         return spiffs_offset, spiffs_size
-if __name__ == "__main__":
-    get_spiffs_parameter("readme.md")
