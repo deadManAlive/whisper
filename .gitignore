@@ -10,3 +10,4 @@
 /public/bundle.*
 *.spiffs.bin
 arduino-cli.yaml
+*.exe
