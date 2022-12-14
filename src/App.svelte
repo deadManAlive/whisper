@@ -1,30 +1,41 @@
-<script>
-	export let name;
+<script lang="ts">
+    import { marked } from 'marked';
+
+    const usr = "You";
+
+    type Message = {
+        username: string;
+        message: string;
+    };
+
+    let new_message = "";
+
+    let message_list: Message[] = [{username: "John Dowe", message: "wassup"}];
+
+    function addMessage() {
+        message_list = [{username: usr, message: new_message}, ...message_list];
+        new_message = "";
+    }
 </script>
 
-<main>
-	<h1>Fuck {name}!</h1>
-	<p>I won't do what you told me.</p>
-</main>
+<br/>
+{#each message_list as msg}
+    <div class="flex-container">
+        <strong>{msg.username}</strong>
+        {@html marked(msg.message)}
+    </div>
+<br/>
+{/each}
+
+<div class="flex-container">
+    <textarea bind:value={new_message} placeholder="Write message..."></textarea>
+    <button on:click={addMessage}>Send</button>
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+	.flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 </style>
