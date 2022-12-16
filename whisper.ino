@@ -16,14 +16,14 @@ void setup()
         return;
     }
 
-    Serial.println("Connection to WiFi");
+    Serial.print("Connecting to WiFi");
     WiFi.begin(auth::ssid, auth::pswd);
     while(WiFi.status() != WL_CONNECTED) {
         Serial.print(".");
         delay(1000);
     }
     Serial.println("");
-    Serial.printf("Connected to AP %s (%s) with address %s.", auth::ssid, ip2cstr(WiFi.gatewayIP()), ip2cstr(WiFi.localIP()));
+    Serial.printf("Connected to AP [%s] with address [%s].", auth::ssid, ip2cstr(WiFi.localIP()));
 
     server.on("/", HTTP_GET, [](AsyncWebServerRequest* request) {
         request->send(SPIFFS, "/index.html", String(), false, nullptr);
