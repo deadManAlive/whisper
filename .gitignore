@@ -5,6 +5,7 @@
 /build/
 /__pycache__/
 .DS_Store
+/libraries/ArduinoJson/
 
 # files
 /public/bundle.*

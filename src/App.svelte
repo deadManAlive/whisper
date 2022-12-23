@@ -31,6 +31,7 @@
             console.log(`websocket: error connecting to ${gateway}`);
         };
         websocket.onmessage = (event) => {
+            console.log(event.data);
             let data: Message = JSON.parse(event.data);
             console.log(data);
             message_list = [{username: data.username, message: data.message}, ...message_list]
@@ -72,7 +73,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 4px 6px #888888;
+        /* box-shadow: 4px 6px #888888; */
         border-radius: 8px;
         outline: auto;
     }
