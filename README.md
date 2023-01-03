@@ -1,6 +1,7 @@
 # Whisper
 ---
 ~~Personalized~~ localized communication server for ESP32 using Svelte and Arduino framework.
+Initially made for Universitas Indonesia 2022/2023 Electrical Engineering's Embedded System-2 class final project.
 ## ESP32
 [ESP32](https://www.espressif.com/en/products/socs/esp32) is a low-cost MCU that is very rich in features and of course portable.
 ## Svelte
@@ -13,8 +14,8 @@
 * [esptool.py](https://github.com/espressif/esptool)
 ## To Do
 - [x] Svelte on ESP32.
-- [ ] Working chat app.
-- [ ] Multiple user.
+- [x] Working chat app.
+- [x] Multiple user.
 - [ ] Primitive authentication: **??**
 In far future:
 - [ ] More advanced authentication system.
